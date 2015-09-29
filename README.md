@@ -1,7 +1,7 @@
 # SwiftToast
 An android like toast lib write in swift
 
-<img src="https://github.com/aotian16/ESwiftToast/blob/master/screen_shot.png" width="188px" height="334px" />
+<img src="https://github.com/aotian16/SwiftToast/blob/master/image/screen_shot.png" width="188px" height="334px" />
 
 # install
 just copy SwiftToast.swift to your project
