@@ -1,0 +1,1 @@
+../../../../../../../.cocoapods/repos/SwiftToast/SwiftToast/SwiftToast/SwiftToast.h

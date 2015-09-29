@@ -1,0 +1,14 @@
+PODS:
+  - SwiftToast (0.0.1)
+
+DEPENDENCIES:
+  - SwiftToast (from `/Users/tongjin/.cocoapods/repos/SwiftToast/SwiftToast`)
+
+EXTERNAL SOURCES:
+  SwiftToast:
+    :path: /Users/tongjin/.cocoapods/repos/SwiftToast/SwiftToast
+
+SPEC CHECKSUMS:
+  SwiftToast: 0eda631590ef6a878a67ad3a12f71f0ea95cec5f
+
+COCOAPODS: 0.38.2

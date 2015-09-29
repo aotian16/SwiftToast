@@ -1,0 +1,24 @@
+{
+  "name": "SwiftToast",
+  "version": "0.0.1",
+  "summary": "An android like toast lib for ios in swift",
+  "description": "A longer description of SwiftToast in Markdown format.\n\n* Think: Why did you write this? What is the focus? What does it do?\n* CocoaPods will be using this to generate tags, and improve search results.\n* Try to keep it short, snappy and to the point.\n* Finally, don't worry about the indent, CocoaPods strips it!",
+  "homepage": "https://github.com/aotian16/SwiftToast",
+  "license": "MIT",
+  "authors": {
+    "aotian16": "aotian16@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/aotian16/SwiftToast.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "SwiftToast",
+    "SwiftToast/**/*.{h,m,swift}"
+  ],
+  "exclude_files": "SwiftToast/Exclude",
+  "frameworks": "UIKit"
+}
