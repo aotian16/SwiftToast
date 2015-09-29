@@ -1,6 +1,6 @@
 //
-//  ESwiftToast.swift
-//  ESwiftToastDemo
+//  SwiftToast.swift
+//  SwiftToastDemo
 //
 //  Created by 童进 on 15/8/11.
 //  Copyright (c) 2015年 qefee. All rights reserved.
@@ -11,10 +11,10 @@ import UIKit
 
 
 /// toast class
-class ESwiftToast: UIView {
+public class SwiftToast: UIView {
     
     /// positon to show toast
-    enum ESwiftToastPosition {
+    enum SwiftToastPosition {
         case top
         case center
         case bottom
@@ -34,21 +34,21 @@ class ESwiftToast: UIView {
     var _contentView: UIButton!
     
     /// duration
-    var _duration: NSTimeInterval = ESwiftToast.DEFAULT_DISPLAY_DURATION
+    var _duration: NSTimeInterval = SwiftToast.DEFAULT_DISPLAY_DURATION
     
     /// toast tap action
-    var _tapAction: ((ESwiftToast) -> Void)?
+    var _tapAction: ((SwiftToast) -> Void)?
     
     /// offset to top or bottom(default is 20)
     var _offset:CGFloat = DEFAULT_OFFSET
     
     /// positon to show toast(default is bottom)
-    var _position = ESwiftToastPosition.bottom
+    var _position = SwiftToastPosition.bottom
     
     /// animation duration
     var _animationDuration = DEFAULT_ANIMATION_DURATION
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -94,9 +94,9 @@ class ESwiftToast: UIView {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    class func make(text:String) -> ESwiftToast {
+    class func make(text:String) -> SwiftToast {
         
-        let toast = ESwiftToast(text: text)
+        let toast = SwiftToast(text: text)
         
         toast._contentView.addTarget(toast, action: "toastTaped:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -148,9 +148,9 @@ class ESwiftToast: UIView {
         
         if let w = window {
             switch _position {
-            case ESwiftToastPosition.bottom:
+            case SwiftToastPosition.bottom:
                 _contentView.center = CGPointMake(w.center.x, w.frame.height - (_contentView.frame.height/2 + _offset))
-            case ESwiftToastPosition.center:
+            case SwiftToastPosition.center:
                 _contentView.center = w.center
             default:
                 _contentView.center = CGPointMake(w.center.x, _contentView.frame.height/2 + _offset)
@@ -162,9 +162,9 @@ class ESwiftToast: UIView {
     }
     
     /// show toast
-    class func show(message: String, duration: NSTimeInterval, position: ESwiftToastPosition, tapAction: ((ESwiftToast) -> Void)? = nil) {
+    class func show(message: String, duration: NSTimeInterval, position: SwiftToastPosition, tapAction: ((SwiftToast) -> Void)? = nil) {
         
-        let toast = ESwiftToast.make(message)
+        let toast = SwiftToast.make(message)
         
         toast._duration = duration
         toast._position = position
@@ -174,12 +174,12 @@ class ESwiftToast: UIView {
     }
     
     /// show toast
-    class func show(message: String, tapAction: ((ESwiftToast) -> Void)? = nil) {
-        show(message, duration: ESwiftToast.DEFAULT_DISPLAY_DURATION, position: ESwiftToastPosition.bottom, tapAction: tapAction)
+    class func show(message: String, tapAction: ((SwiftToast) -> Void)? = nil) {
+        show(message, duration: SwiftToast.DEFAULT_DISPLAY_DURATION, position: SwiftToastPosition.bottom, tapAction: tapAction)
     }
     
     /// show toast
-    class func show(message: String, duration: NSTimeInterval, tapAction: ((ESwiftToast) -> Void)? = nil) {
-        show(message, duration: duration, position: ESwiftToastPosition.bottom, tapAction: tapAction)
+    class func show(message: String, duration: NSTimeInterval, tapAction: ((SwiftToast) -> Void)? = nil) {
+        show(message, duration: duration, position: SwiftToastPosition.bottom, tapAction: tapAction)
     }
 }
