@@ -11,6 +11,7 @@
 		261391001BBA17C100F7D022 /* SwiftToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261390F51BBA17C100F7D022 /* SwiftToast.framework */; settings = {ASSET_TAGS = (); }; };
 		261391051BBA17C100F7D022 /* SwiftToastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261391041BBA17C100F7D022 /* SwiftToastTests.swift */; };
 		261391101BBA276700F7D022 /* SwiftToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613910F1BBA276700F7D022 /* SwiftToast.swift */; settings = {ASSET_TAGS = (); }; };
+		2613914B1BBA6EEE00F7D022 /* SwiftToast.swift in Headers */ = {isa = PBXBuildFile; fileRef = 2613910F1BBA276700F7D022 /* SwiftToast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				261390F91BBA17C100F7D022 /* SwiftToast.h in Headers */,
+				2613914B1BBA6EEE00F7D022 /* SwiftToast.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +387,7 @@
 				2613910B1BBA17C100F7D022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2613910C1BBA17C100F7D022 /* Build configuration list for PBXNativeTarget "SwiftToastTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +396,7 @@
 				2613910E1BBA17C100F7D022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
