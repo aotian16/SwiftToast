@@ -113,7 +113,7 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-    s.resources = "SwiftToast/**/*.{png,jpeg,jpg,storyboard,xib}"
+  # s.resources = "SwiftToast/**/*.{png,jpeg,jpg,storyboard,xib}"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -123,7 +123,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "UIKit", "XCTest"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
