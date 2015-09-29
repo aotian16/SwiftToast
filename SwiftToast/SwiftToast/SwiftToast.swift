@@ -20,33 +20,33 @@ public class SwiftToast: UIView {
         case bottom
     }
     
-    static let DEFAULT_DISPLAY_DURATION: NSTimeInterval = 2.0
-    static let DEFAULT_OFFSET: CGFloat = 20
-    static let DEFAULT_ANIMATION_DURATION: NSTimeInterval = 0.3
+    public static let DEFAULT_DISPLAY_DURATION: NSTimeInterval = 2.0
+    public static let DEFAULT_OFFSET: CGFloat = 20
+    public static let DEFAULT_ANIMATION_DURATION: NSTimeInterval = 0.3
     
     /// text to show
-    var _text: String = ""
+    public var _text: String = ""
     
     /// label to show
-    var _textLabel: UILabel!
+    public var _textLabel: UILabel!
     
     /// content view
-    var _contentView: UIButton!
+    public var _contentView: UIButton!
     
     /// duration
-    var _duration: NSTimeInterval = SwiftToast.DEFAULT_DISPLAY_DURATION
+    public var _duration: NSTimeInterval = SwiftToast.DEFAULT_DISPLAY_DURATION
     
     /// toast tap action
-    var _tapAction: ((SwiftToast) -> Void)?
+    public var _tapAction: ((SwiftToast) -> Void)?
     
     /// offset to top or bottom(default is 20)
-    var _offset:CGFloat = DEFAULT_OFFSET
+    public var _offset:CGFloat = DEFAULT_OFFSET
     
     /// positon to show toast(default is bottom)
-    var _position = SwiftToastPosition.bottom
+    public var _position = SwiftToastPosition.bottom
     
     /// animation duration
-    var _animationDuration = DEFAULT_ANIMATION_DURATION
+    public var _animationDuration = DEFAULT_ANIMATION_DURATION
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
