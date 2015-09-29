@@ -14,7 +14,7 @@ import UIKit
 public class SwiftToast: UIView {
     
     /// positon to show toast
-    enum SwiftToastPosition {
+    public enum SwiftToastPosition {
         case top
         case center
         case bottom
@@ -94,7 +94,7 @@ public class SwiftToast: UIView {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    class func make(text:String) -> SwiftToast {
+    public class func make(text:String) -> SwiftToast {
         
         let toast = SwiftToast(text: text)
         
@@ -142,7 +142,7 @@ public class SwiftToast: UIView {
     }
     
     /// show toast by instance
-    func innerShow() {
+    public func innerShow() {
         
         let window:UIWindow? = UIApplication.sharedApplication().keyWindow
         
@@ -162,7 +162,7 @@ public class SwiftToast: UIView {
     }
     
     /// show toast
-    class func show(message: String, duration: NSTimeInterval, position: SwiftToastPosition, tapAction: ((SwiftToast) -> Void)? = nil) {
+    public class func show(message: String, duration: NSTimeInterval, position: SwiftToastPosition, tapAction: ((SwiftToast) -> Void)? = nil) {
         
         let toast = SwiftToast.make(message)
         
@@ -174,12 +174,12 @@ public class SwiftToast: UIView {
     }
     
     /// show toast
-    class func show(message: String, tapAction: ((SwiftToast) -> Void)? = nil) {
+    public class func show(message: String, tapAction: ((SwiftToast) -> Void)? = nil) {
         show(message, duration: SwiftToast.DEFAULT_DISPLAY_DURATION, position: SwiftToastPosition.bottom, tapAction: tapAction)
     }
     
     /// show toast
-    class func show(message: String, duration: NSTimeInterval, tapAction: ((SwiftToast) -> Void)? = nil) {
+    public class func show(message: String, duration: NSTimeInterval, tapAction: ((SwiftToast) -> Void)? = nil) {
         show(message, duration: duration, position: SwiftToastPosition.bottom, tapAction: tapAction)
     }
 }
