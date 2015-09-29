@@ -1,0 +1,7 @@
+platform :ios, "8.0"
+
+#pod "PodName"
+
+target :SwiftToastTests, :exclusive => true do
+  # pod 'Kiwi'
+end
